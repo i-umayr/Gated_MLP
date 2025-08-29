@@ -8,7 +8,7 @@ This repository extends the siMLPe architecture with novel gated cross-attention
 
 ### Key Features
 
-- **Novel Architecture**: First MLP-compatible gated cross-attention system
+- **Novel Architecture**: Novel MLP-compatible gated cross-attention system
 - **State-of-the-art Performance**: 70.8mm MPJPE on MoGaze dataset  
 - **Efficient**: 0.20M parameters vs 1.86M in competing approaches
 - **Robust Training**: Aggressive progressive training strategy preventing baseline degradation
