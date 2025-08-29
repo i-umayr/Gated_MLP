@@ -65,7 +65,7 @@ mkdir -p data/mogaze_3d
 
 ### MoGaze Dataset
 
-1. Download the MoGaze dataset from the [official source](https://sites.google.com/view/mogaze)
+1. Download the MoGaze dataset from the [official source](https://humans-to-robots-motion.github.io/mogaze)
 2. Place raw HDF5 files in `data/mogaze/`
 3. Run preprocessing (see `exps/mogaze_baseline_3d/mogaze_preprocessor.py`)
 
@@ -163,7 +163,7 @@ siMLPe/
 
 ## Pre-trained Models
 
-Download pre-trained models from [releases](https://github.com/dulucas/siMLPe/releases):
+Download pre-trained models from [todo](todo):
 
 - `model-baseline-3d.pth`: Pose-only baseline (73.3mm MPJPE)
 - `model-final-aggressive.pth`: Breakthrough gaze-enhanced model (70.8mm MPJPE)
@@ -191,78 +191,24 @@ Outputs:
 - Attention pattern visualization
 - Efficiency benchmarks
 
-## Citation
 
-If you use this code in your research, please cite:
-
-```bibtex
-@inproceedings{guo2023simlpe,
-  title={Back to MLP: A Simple Baseline for Human Motion Prediction},
-  author={Guo, Wen and Du, Yuming and Shen, Xi and Lepetit, Vincent and Alameda-Pineda, Xavier and Moreno-Noguer, Francesc},
-  booktitle={Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision},
-  pages={4809--4819},
-  year={2023}
-}
-
-@article{kratzer2020mogaze,
-  title={MoGaze: A Dataset of Full-Body Motions that Includes Workspace Geometry and Eye-Gaze},
-  author={Kratzer, Philipp and Bihlmaier, Simon and Midlagajni, Niteesh Balachandra and Prakash, Rohit and Toussaint, Marc and Mainprice, Jim},
-  journal={IEEE Robotics and Automation Letters},
-  volume={6},
-  number={2},
-  pages={367--373},
-  year={2020}
-}
-```
-
-## Troubleshooting
-
-### Common Issues
-
-**Gate weight remains near 0:**
-- Ensure using aggressive training strategy (`train_mogaze_aggressive.py`)
-- Check gate learning rate multiplier (should be ≥5.0)
-- Verify regularization is enabled in aggressive stage
-
-**Memory issues:**
-- Reduce batch size in config files
-- Use CPU evaluation for large sequences
-- Enable gradient checkpointing
-
-**Data loading errors:**
-- Verify data preprocessing completed successfully
-- Check file paths in config files
-- Ensure pose and gaze files are synchronized
 
 ### Performance Expectations
 
-- **Training time**: ~6-8 hours for full 40K iterations on GTX 1650
+- **Training time**: ~2-3 hours for full 40K iterations on GTX 1650
 - **Memory usage**: ~1.5GB GPU memory during training
 - **Expected results**: 70.8±66.5mm MPJPE with 0.359 gate weight
 
-## Contributing
-
-Contributions are welcome! Please:
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/new-feature`)
-3. Commit changes (`git commit -am 'Add new feature'`)
-4. Push to branch (`git push origin feature/new-feature`)
-5. Create Pull Request
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgments
 
 - Original siMLPe implementation by [Guo et al.](https://github.com/dulucas/siMLPe)
 - MoGaze dataset by [Kratzer et al.](https://sites.google.com/view/mogaze)  
-- Research conducted during internship at [Institution Name]
+- Research conducted during internship at [DIIM Lab UofGuelph]
 
 ## Contact
 
-For questions about the gated cross-attention extensions, please open an issue or contact [your-email@institution.edu].
+For questions about the gated cross-attention extensions, please open an issue or contact [uasim.bese21seecs@seecs.edu.pk].
 
 ---
 
