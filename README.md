@@ -2,10 +2,6 @@
 
 **Novel MLP-compatible gated cross-attention architecture for integrating gaze information into human motion prediction.**
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Python](https://img.shields.io/badge/python-3.7+-blue.svg)](https://www.python.org/downloads/)
-[![PyTorch](https://img.shields.io/badge/PyTorch-1.8+-ee4c2c.svg)](https://pytorch.org/)
-
 ## Overview
 
 This repository extends the siMLPe architecture with novel gated cross-attention mechanisms to incorporate eye-gaze information for human motion prediction. Our approach achieves **70.8mm MPJPE** on the MoGaze dataset, representing a **16.5% improvement** over existing gaze-enhanced methods while using **9.3× fewer parameters**.
