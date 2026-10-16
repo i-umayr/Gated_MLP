@@ -65,6 +65,9 @@ Thumbs.db
 exps/*/log/
 exps/*/data/
 
+# Claude Code project notes (local only)
+CLAUDE.md
+
 # TensorBoard logs and training text logs
 runs/
 exps/**/*.txt
