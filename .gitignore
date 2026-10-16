@@ -64,3 +64,15 @@ Thumbs.db
 # Specific large directories
 exps/*/log/
 exps/*/data/
+
+# TensorBoard logs and training text logs
+runs/
+exps/**/*.txt
+
+# Released checkpoints: final weights of every model and fold
+!exps/simlpe_baseline/fold_*/log_3d/snapshot/model-iter-80000.pth
+!exps/gated_gaze/fold_*/log_aggressive/snapshot/model-final-aggressive.pth
+!exps/gated_gaze/fold_*/log_gated/snapshot/model-iter-80000.pth
+!exps/mogaze_baseline_concat/log_concat/snapshot/fold_*/model-final.pth
+!exps/mogaze_baseline_additive/log_additive/snapshot/fold_*/model-final.pth
+!exps/mogaze_baseline_no_gate/log_crossattn/snapshot/fold_*/model-final.pth
