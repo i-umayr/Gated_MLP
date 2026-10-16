@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 Code for _Efficient Multimodal Human Motion Prediction: A Gated MLP Approach for Gaze-Pose Integration_. All models are trained and evaluated on MoGaze with leave-one-person-out cross-validation (LOPOCV).
 
 ## Requirements
@@ -125,4 +124,3 @@ python train_mogaze_concat.py                       # all 6 folds, 80k iteration
 
 Each model folder also has a test script for a quick check of one fold (`test_mogaze_3d.py`, `test_mogaze_aggressive.py`, `test_mogaze_gated.py`) or of one fusion variant (`test_mogaze_concat.py`, `test_mogaze_additive.py`, `test_mogaze_crossattn.py`). Their overall MPJPE matches `eval_all.py`; the per-fold test scripts in `simlpe_baseline/` and `gated_gaze/` average the 200–1000 ms errors over batches instead of samples, so those columns can differ slightly. The paper results are the ones printed by `eval_all.py`.
 =======
->>>>>>> ebf94df9fd3add9ebdbd505c15462d90e7f4b806
