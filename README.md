@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 # Gated MLP for Gaze-Pose Human Motion Prediction
 
 Code for _Efficient Multimodal Human Motion Prediction: A Gated MLP Approach for Gaze-Pose Integration_. All models are trained and evaluated on MoGaze with leave-one-person-out cross-validation (LOPOCV).
