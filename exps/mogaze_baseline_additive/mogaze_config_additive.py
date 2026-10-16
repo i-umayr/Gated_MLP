@@ -29,13 +29,8 @@ C.seed = 304
 """Directory configuration"""
 C.abs_dir = osp.dirname(osp.realpath(__file__))
 C.this_dir = C.abs_dir.split(osp.sep)[-1]
-C.repo_name = 'siMLPe'
-
-# Try to find repo root, fallback to current directory
-try:
-    C.root_dir = C.abs_dir[:C.abs_dir.index(C.repo_name) + len(C.repo_name)]
-except ValueError:
-    C.root_dir = C.abs_dir
+# Repository root: two levels above exps/<variant>/
+C.root_dir = osp.abspath(osp.join(C.abs_dir, '..', '..'))
 
 C.log_dir = osp.abspath(osp.join(C.abs_dir, 'log_additive'))
 C.snapshot_dir = osp.abspath(osp.join(C.log_dir, "snapshot"))

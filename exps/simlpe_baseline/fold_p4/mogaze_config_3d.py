@@ -20,8 +20,8 @@ C.seed = 304
 
 C.abs_dir = osp.dirname(osp.realpath(__file__))
 C.this_dir = C.abs_dir.split(osp.sep)[-1]
-C.repo_name = 'siMLPe'
-C.root_dir = C.abs_dir[:C.abs_dir.index(C.repo_name) + len(C.repo_name)]
+# Repository root: three levels above exps/<model>/fold_<p>/
+C.root_dir = osp.abspath(osp.join(C.abs_dir, '..', '..', '..'))
 
 C.log_dir = osp.abspath(osp.join(C.abs_dir, 'log_3d'))
 C.snapshot_dir = osp.abspath(osp.join(C.log_dir, "snapshot"))
